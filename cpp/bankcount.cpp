@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
-class Bank{
+class Bank
+{
     
     string name;
     int accbalance,wdbalance,dpbalance;
@@ -8,9 +9,6 @@ class Bank{
     static int totaltracount;
     static int totaldptracount;
     static int totalwdtracount;
-    static int bankcount;
-    static int withdrawamount;
-    static int depositeamount;
     void getdata();
     Bank();
     Bank(int);
