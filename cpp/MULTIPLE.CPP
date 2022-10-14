@@ -1,31 +1,42 @@
 #include<iostream>
 using namespace std;
-class A{
+class A
+{
     public:
     A()
     {
-        cout<<"\n A constuctor called .... ";
+        cout<<"\n A constructor called .... "; 
     }
-   /* ~A()
+    ~A()
     {
         cout<<"\n A destructor called...";
-    }*/
+    }
 };
-class B :public A{
+class B 
+{
     public:
     B()
     {
         cout<<"\n B constructor called ...";
     }
+     ~B()
+    {
+        cout<<"\n B destructor called...";
+    }
 };
-/*class C :public B{
+class C :public A, public B
+{
     public:
    C()
     {
         cout<<"\n C constructor called ...";
     }
-};*/
+     ~C()
+    {
+        cout<<"\n C destructor called...";
+    }
+};
 int main()
 {
-  B b1,b2,bn;
+  C c;
 }
