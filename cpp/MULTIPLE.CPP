@@ -19,7 +19,7 @@ class B
     {
         cout<<"\n B constructor called ...";
     }
-     ~B()
+    ~B()
     {
         cout<<"\n B destructor called...";
     }
@@ -31,7 +31,7 @@ class C :public A, public B
     {
         cout<<"\n C constructor called ...";
     }
-     ~C()
+    ~C()
     {
         cout<<"\n C destructor called...";
     }
