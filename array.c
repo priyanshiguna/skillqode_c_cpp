@@ -6,7 +6,7 @@ int main()
 	for(i=0;i<10;i++)
 	{
 		printf("\n enter value : ",i);
-		scanf("%d";&a[10]);
+		scanf("%d",&a[10]);
 	}
 	printf("\n your array is \n\n");
 	for(i=0;i<10;i++)
