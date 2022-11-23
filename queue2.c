@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define SIZE 10
-int front=-1,rear=-1,queqe[SIZE],i;
+int front=-1,rear=-1,queqe[SIZE],i,val;
 void RearInsert(int val)  
 {
     if(rear>SIZE)
@@ -46,14 +46,57 @@ void print()
         printf("\n\t\tq[%d]=%d",i,queqe[i]);
     }
 } 
+void frontInsert()
+{
+    if (front == 0)
+        printf("\nQueue Is Full.....\n");
+    else if (front == -1)
+    {
+        front = SIZE;
+        rear = SIZE;
+        printf("\n-----> If You Insert value Than press 1\n ");
+    }
+    else
+    {
+        front = front - 1;
+        printf("Enter Value :");
+        scanf("%d", &val);
+        queqe[front] = val;
+    }
+}
+void rearDelete()
+{
+    if (rear == 0)
+        printf("\nQueue Is Empty.....\n");
+    else
+        rear--;
+}
+void display()
+{
+    printf("\n");
+    if (rear == 0 || front == -1)
+    {
+        printf("\nQueue Is Empty.....\n");
+        front = -1;
+    }
+    else
+    {
+        for (i = rear; i < front; i++)
+            printf("\n\t\t q[%d] = %d  ",i, queqe[i]);
+    }
+    printf("\n~~~~~~~~~~~~~~~~~\n");
+}
 int main()
 {
     int ch,val;
     do 
     {
-        printf("\n press 1 for-->> push");
-        printf("\n press 2 for-->> pop");
-        printf("\n press 3 for-->> show");
+        printf("\n press 1 for-->> rear insert");
+        printf("\n press 2 for-->> front delete");
+        printf("\n press 3 for-->> print");
+        printf("\n press 4 for-->> front insert");
+        printf("\n press 5 for-->> rear delete");
+        printf("\n press 6 for-->> display");
         printf("\n press 0 for-->> exit");
         printf("\nenter your choice=");
         scanf("%d",&ch);
@@ -69,6 +112,17 @@ int main()
             break;
         case 3:
             print();
+            break;
+        case 4:
+            //printf("Enter Value:");
+            //scanf("%d",&val);
+            frontInsert(val);
+            break;
+        case 5:
+            rearDelete();
+            break;
+        case 6:
+            display();
             break;
        
 
