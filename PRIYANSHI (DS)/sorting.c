@@ -1,4 +1,4 @@
-// assending sorting
+// Assending sorting
 #include<stdio.h>
 #include<stdlib.h>
 int i, j, n, temp;
