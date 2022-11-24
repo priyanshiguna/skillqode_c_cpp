@@ -71,21 +71,6 @@ void rearDelete()
     else
         rear--;
 }
-void display()
-{
-    printf("\n");
-    if (rear == 0 || front == -1)
-    {
-        printf("\nQueue Is Empty.....\n");
-        front = -1;
-    }
-    else
-    {
-        for (i = rear; i < front; i++)
-            printf("\n\t\t q[%d] = %d  ",i, queqe[i]);
-    }
-    printf("\n~~~~~~~~~~~~~~~~~\n");
-}
 int main()
 {
     int ch,val;
@@ -96,7 +81,6 @@ int main()
         printf("\n press 3 for-->> print");
         printf("\n press 4 for-->> front insert");
         printf("\n press 5 for-->> rear delete");
-        printf("\n press 6 for-->> display");
         printf("\n press 0 for-->> exit");
         printf("\nenter your choice=");
         scanf("%d",&ch);
@@ -113,19 +97,12 @@ int main()
         case 3:
             print();
             break;
-        case 4:
-            //printf("Enter Value:");
-            //scanf("%d",&val);
+        case 4 :
             frontInsert(val);
             break;
         case 5:
             rearDelete();
             break;
-        case 6:
-            display();
-            break;
-       
-
         }
     }
     while(ch!=0);
