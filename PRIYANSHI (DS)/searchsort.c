@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int i, j, n, temp;
+int i, j, n, temp , cnt=0;
 int a[100];
 void randomarray()
 {
@@ -48,6 +48,32 @@ void sorting()
     for (i = 0; i < n; i++)
         printf("%d  ", a[i]);
 }
+void bubblesorting()
+{
+    printf("Enter Size Of Array : ");
+    scanf("%d", &n);
+    for(int i=0;i<n;i++)
+    {
+        a[i]=rand()%100;
+        printf("\n  %d" , a[i]);
+    }
+    for (i = 0; i < n - 1; i++) 
+        for (j = 0; j < n - i - 1; j++)
+        {  
+            cnt++;
+            if (a[j] > a[j+1])
+            {
+                temp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = temp;
+            }
+        }                               
+    printf("\n\n");
+    for (i = 0; i < n; i++)
+        printf("%d  ", a[i]);
+
+        printf("\n cnt : %d",cnt);
+}
 void  binarysearch()
 {
     sorting();
@@ -83,8 +109,9 @@ int main()
     {
         printf("\n press 1 for-->> print random array");
         printf("\n press 2 for-->> selection sorting");
-        printf("\n press 3 for-->> linear search");
-        printf("\n press 4 for-->> binary search");
+        printf("\n press 3 for-->> Bubble sorting");
+        printf("\n press 4 for-->> linear search");
+        printf("\n press 5 for-->> binary search");
         printf("\n press 0 for-->> exit");
         printf("\nenter your choice=");
         scanf("%d",&ch);
@@ -97,9 +124,12 @@ int main()
             sorting();
             break;
         case 3:
-            linearsearch();
+            bubblesorting();
             break;
         case 4:
+             linearsearch();
+            break;
+        case 5:
             binarysearch();
             break;
         case 0:
