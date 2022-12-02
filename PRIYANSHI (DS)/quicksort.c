@@ -1,6 +1,6 @@
 #include<stdio.h>
 #define n 25
-int totalElement;
+int totalElement , cnt=0;
 //void print(int number[25])
 //{
 //      int i;
@@ -21,6 +21,7 @@ void quicksort(int number[25],int first,int last)
          i++;
         while(number[j]>number[pivot])
          j--;
+        cnt++;
         if(i<j)
         {
             temp=number[i];
@@ -37,15 +38,27 @@ void quicksort(int number[25],int first,int last)
 }
 int main()
 {
-   int i, count, number[25];
+   int i , number[25];
    printf("How many elements are u going to enter?: ");
-   scanf("%d",&count);
-   printf("Enter %d elements: ", count);
-   for(i=0;i<count;i++)
-   scanf("%d",&number[i]);
-   quicksort(number,0,count-1);
-   printf("Order of Sorted elements: ");
-   for(i=0;i<count;i++)
-   printf(" %d",number[i]);
+   scanf("%d",&totalElement);
+
+   //printf("Enter %d elements: ", totalElement);
+
+   //for(i=0;i<totalElement;i++)
+   //scanf("%d",&number[i]);
+    printf("\narray elements:");    
+    for (i = 0; i < 10; i++)
+         number[i] = rand() % 50;    
+
+    for (i = 0; i < 10; i++)
+        printf("%d ", number[i]);
+   quicksort(number,0 , totalElement-1);
+
+   printf("\n Order of Sorted elements: ");
+
+   for(i=0;i<totalElement;i++)
+        printf(" %d",number[i]);
+
+    printf("\n cnt : %d ",cnt);
    return 0;
 }
