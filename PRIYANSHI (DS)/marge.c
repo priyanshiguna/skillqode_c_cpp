@@ -3,7 +3,7 @@
 #define SIZE 10
 void mergearray()
 {
-    int a[10], b[10], i, k, merge[50];
+    int a[10], b[10], i, k, merge[20];
     printf("\n Enter Array 1 Elements: ");
     for(i=0; i<SIZE; i++)
     {

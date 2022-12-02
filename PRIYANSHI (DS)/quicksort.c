@@ -46,6 +46,7 @@ int main()
 
    //for(i=0;i<totalElement;i++)
    //scanf("%d",&number[i]);
+   
     printf("\narray elements:");    
     for (i = 0; i < 10; i++)
          number[i] = rand() % 50;    
