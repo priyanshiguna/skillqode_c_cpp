@@ -70,6 +70,7 @@
     "stdexcept": "cpp",
     "streambuf": "cpp",
     "typeinfo": "cpp",
-    "conio.h": "c"
+    "conio.h": "c",
+    "LINKLIST.C": "cpp"
   }
 }
