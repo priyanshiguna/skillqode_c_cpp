@@ -28,13 +28,17 @@ int main()
     var4.c = 'D';
     var4.ptr = NULL;
 
+    var1.ptr = &var1;
     var1.ptr = &var2 ;
-    var1.ptr = &var3 ;
-    var1.ptr = &var4 ;
+    var2.ptr = &var3 ;
+    var3.ptr = &var4 ;
 
     printf("\n %d ", var1.i);
     printf("\n %d ", var2.i);
     printf("\n %d ", var3.i);
     printf("\n %d ", var4.i);
     printf("\n %c ", var1.ptr -> c);
+    printf("\n %c ", var2.ptr -> c);
+    printf("\n %c ", var3.ptr -> c);
+    printf("\n %c ", var4.ptr -> c);
 }
